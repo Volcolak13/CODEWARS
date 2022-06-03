@@ -5,15 +5,17 @@
 # will be a non-negative integer.
 
 def digital_root(n):
-    res = 0
-    for i in str(n):
-        res += int(i)
-    if res > 9:
-        res = digital_root(res)
-        print(n)
-    return res
+    # res = 0
+    # for i in str(n):
+    #     res += int(i)
+    # if res > 9:
+    #     res = digital_root(res)
+    #     print(n)
+    # return res
 
+    # Clever code
+    return n if n < 10 else digital_root(sum(map(int, str(n))))
 
-n = int(16)
+n = int(16589)
 res = digital_root(n)
 print(res)
