@@ -13,7 +13,7 @@ def digital_root(n):
     #     print(n)
     # return res
 
-    # Clever code
+    # Clever code from CW
     return n if n < 10 else digital_root(sum(map(int, str(n))))
 
 n = int(16589)
